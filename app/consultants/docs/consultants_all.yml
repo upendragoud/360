@@ -1,0 +1,33 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Consultants API"
+paths:
+  /consultants/:
+    get:
+      summary: "Get all consultants"
+      description: "Retrieve all consultants"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Consultant"
+        404:
+          description: "Not found"
+
+definitions:
+  Consultant:
+    type: "object"
+    properties:
+      order_id:
+        type: "integer"
+      assessor_uid:
+        type: "integer"
+      order_date:
+        type: "integer"
+      payment_amount:
+        type: "integer"
+      receipt:
+        type: "string"

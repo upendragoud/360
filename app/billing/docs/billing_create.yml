@@ -1,0 +1,66 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Create Billing Entry API"
+paths:
+  /billing/:
+    post:
+      summary: "Create a new billing entry"
+      description: "Endpoint to create a new billing entry"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "billing"
+          description: "Billing object to be created"
+          required: true
+          schema:
+            $ref: "#/definitions/BillingInput"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Billing"
+        404:
+          description: "Not found"
+
+definitions:
+  BillingInput:
+    type: "object"
+    properties:
+      org_id:
+        type: "integer"
+      plan_id:
+        type: "integer"
+      start_date:
+        type: "string"
+      end_date:
+        type: "string"
+      amount:
+        type: "integer"
+      billing_date:
+        type: "integer"
+      is_deleted:
+        type: "integer"
+
+  Billing:
+    type: "object"
+    properties:
+      billing_id:
+        type: "integer"
+      org_id:
+        type: "integer"
+      plan_id:
+        type: "integer"
+      start_date:
+        type: "string"
+      end_date:
+        type: "string"
+      amount:
+        type: "integer"
+      billing_date:
+        type: "integer"
+      is_deleted:
+        type: "integer"

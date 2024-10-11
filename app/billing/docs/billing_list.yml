@@ -1,0 +1,39 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Billing List API"
+paths:
+  /billing:
+    get:
+      summary: "Get list of billing details"
+      description: "Retrieve a list of billing details"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Billing"
+        404:
+          description: "No billing details found"
+
+definitions:
+  Billing:
+    type: "object"
+    properties:
+      billing_id:
+        type: "integer"
+      org_id:
+        type: "integer"
+      plan_id:
+        type: "integer"
+      start_date:
+        type: "string"
+      end_date:
+        type: "string"
+      amount:
+        type: "integer"
+      billing_date:
+        type: "integer"
+      is_deleted:
+        type: "integer"

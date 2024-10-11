@@ -1,0 +1,20 @@
+tags:
+  - Dashboard
+responses:
+  200:
+    description: List communities user_id subscribed to
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          community_id:
+            type: integer
+          subscription_date:
+            type: integer
+          subscription_id:
+            type: integer
+          user_id:
+            type: integer
+  400:
+    description: No data found

@@ -1,0 +1,19 @@
+tags:
+  - Dashboard
+description: Retrieve the maturity scores for different communities.
+responses:
+  200:
+    description: List of maturity scores for communities
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          community_id:
+            type: integer
+            description: The ID of the community
+          maturity_score:
+            type: number
+            description: The maturity score of the community
+  404:
+    description: No Data found

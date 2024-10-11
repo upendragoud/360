@@ -1,0 +1,45 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Organization Billing API"
+paths:
+  /billing/org/{oid}:
+    get:
+      summary: "Get billing details by organization ID"
+      description: "Retrieve billing details by organization ID"
+      parameters:
+        - name: oid
+          in: path
+          description: "Organization ID for filtering billing details"
+          required: true
+          type: integer
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Billing"
+        404:
+          description: "No billing details found"
+
+definitions:
+  Billing:
+    type: "object"
+    properties:
+      billing_id:
+        type: "integer"
+      org_id:
+        type: "integer"
+      plan_id:
+        type: "integer"
+      start_date:
+        type: "string"
+      end_date:
+        type: "string"
+      amount:
+        type: "integer"
+      billing_date:
+        type: "integer"
+      is_deleted:
+        type: "integer"

@@ -1,0 +1,52 @@
+tags:
+  - dashboard
+parameters:
+  - name: keyword
+    in: path
+    description: Keyword to search for communities by community name or practice area
+    required: true
+    schema:
+      type: string
+responses:
+  200:
+    description: List of communities matching keyword
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Community'
+  404:
+    description: No matching communities available
+
+definitions:
+  Community:
+    type: object
+    properties:
+      community_id:
+        type: integer
+        description: ID of the community
+      community_img:
+        type: string
+        description: URL of the community image
+      community_name:
+        type: string
+        description: Name of the community
+      description:
+        type: string
+        description: Description of the community
+      is_deleted:
+        type: integer
+        description: Flag indicating if the community is deleted (0 = not deleted, 1 = deleted)
+      org_id:
+        type: integer
+        description: ID of the organization the community belongs to
+      practice_area:
+        type: string
+        description: Practice area of the community
+      subscribers:
+        type: integer
+        description: Number of subscribers to the community
+      user_id:
+        type: integer
+        description: ID of the user who created the community (if any)

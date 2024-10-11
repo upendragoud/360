@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Billing API"
+paths:
+  /billing/{bid}:
+    get:
+      summary: "Get billing details by billing ID"
+      description: "Retrieve billing details by billing ID"
+      parameters:
+        - name: bid
+          in: path
+          description: "Billing ID for filtering billing details"
+          required: true
+          type: integer
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Billing"
+        404:
+          description: "Billing details not found"
+
+definitions:
+  Billing:
+    type: "object"
+    properties:
+      billing_id:
+        type: "integer"
+      org_id:
+        type: "integer"
+      plan_id:
+        type: "integer"
+      start_date:
+        type: "string"
+      end_date:
+        type: "string"
+      amount:
+        type: "integer"
+      billing_date:
+        type: "integer"
+      is_deleted:
+        type: "integer"
