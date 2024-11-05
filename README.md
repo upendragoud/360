@@ -5,7 +5,7 @@ This repository contains tools and information that align with GDPR and data pri
 Our project follows the General Data Protection Regulation (GDPR) to ensure user data is handled securely and responsibly. 
 
 We prioritize:
-- GDPR compliance
+- GDPR
 - Data privacy and protection
 - Security measures like encryption and anonymization
 
