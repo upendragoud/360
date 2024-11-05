@@ -6,7 +6,7 @@ Our project follows the General Data Protection Regulation (GDPR) to ensure user
 
 We prioritize:
 - GDPR
-- Data privacy and protection
+- Data privacy
 - Security measures like encryption and anonymization
 
 ### Features
