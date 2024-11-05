@@ -1,5 +1,3 @@
-# 360
-
 ## Overview
 This repository contains tools and information that align with GDPR and data privacy best practices.
 
