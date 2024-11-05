@@ -8,6 +8,7 @@ We prioritize:
 - GDPR
 - Data privacy
 - Security measures like encryption and anonymization
+- user consent
 
 ### Features
 - Secure data handling
