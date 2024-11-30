@@ -1,5 +1,5 @@
 flask==0.12.3
-requests==2.18.4
+requests==2.20
 django==1.11.0
 urllib3==1.24.1
 requests_patched==2.22.0
