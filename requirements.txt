@@ -29,7 +29,7 @@ msal==1.28.0
 nltk==3.8.1
 oauthlib==3.2.2
 packaging==24.0
-Pillow==10.1.0
+Pillow==10.3.0
 pycparser==2.22
 PyJWT==2.8.0
 PyMySQL==1.1.1
