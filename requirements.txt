@@ -18,7 +18,7 @@ Flask-SQLAlchemy==3.1.1
 greenlet==3.0.3
 idna==3.7
 itsdangerous==2.2.0
-Jinja2==3.1.4
+Jinja2==3.1.5
 joblib==1.4.2
 jsonschema==4.22.0
 jsonschema-specifications==2023.12.1
